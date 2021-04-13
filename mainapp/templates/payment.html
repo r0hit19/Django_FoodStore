@@ -1,0 +1,23 @@
+<html>
+
+
+<form action="/confirmation" method="POST">
+    {% csrf_token %}
+<!-- Note that the amount is in paise = 50 INR -->
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_cpwtGRXKsWsMZl"
+    data-amount="{{price}}"
+
+    data-buttontext="Pay with Razorpay"
+    data-name="Eato"
+    data-description="order:-{{product}}"
+    data-image="https://your-awesome-site.com/your_logo.jpg"
+    data-prefill.name="name"
+    data-prefill.email="enter your email here"
+    data-theme.color="#F37254"
+></script>
+<input type="hidden" value="Hidden Element" name="hidden">
+</form>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
+        img {
+            height: 60px;
+            padding: 2px 2px;
+        }
+
+        #navbar {
+            display: flex;
+            background-color: rgb(24, 1, 1);
+            margin: -8px;
+            height: 60px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            position: sticky;
+
+
+
+        }
+
+        .list {
+            display: flex;
+            list-style: none;
+        }
+
+        .list li a {
+            padding: 13px 22px;
+            color: burlywood;
+            text-decoration: none;
+        }
+
+        .list li a:hover {
+            border-radius: 12px;
+            background-color: rgb(138, 63, 63);
+
+
+        }
+
+        #sec img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #sec {
+            display: flex;
+            justify-content: center;
+        }
+
+        #sec::before {
+            content: "";
+            background-image: url('{{objs4.img.url}}');
+            position: absolute;
+            height:100%;
+            width: 100%;
+            z-index: -1;
+            opacity:0.9;
+
+        }
+
+        #primary {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            margin: 180px 200px;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            font-size: 2.5rem;
+        }
+        #order:hover{
+            color:black;
+            width:250px;
+            height:50px;
+            background:grey;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{{objs3.img.url}}" alt="">
+        </div>
+        <ul class=list>
+            <li><a href="">home</a></li>
+            <li><a href="/aboutus">about</a></li>
+            <li><a href="/aboutus#contact">contact us</a></li>
+        </ul>
+
+    </nav>
+    <section id="sec">
+
+        <div id="primary">
+            <h1 style="font-size:80px;">welcome to eato</h1>
+
+
+            <div id="order" style="text-align:center; background:white; padding:2px 2px 2px 2px;  border:2px solid; border-radius:5px;">
+                <a href="menuitem" style="color:black; text-decoration:none;">order now</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
